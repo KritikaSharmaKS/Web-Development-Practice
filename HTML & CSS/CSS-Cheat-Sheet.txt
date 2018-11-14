@@ -1,0 +1,58 @@
+CSS Cheat Sheet
+
+Reference:
+*https://www.w3schools.com/cssref/css_selectors.asp
+*https://css-tricks.com/almanac/
+
+Cascading Style Sheets at the most basic level it indicates that the order of CSS rules matter. 
+
+.class - it can be repeated, multiple elements can belong to the same class.  
+
+#id - it is for div(for one complete block.) you can use same id only once.
+
+* - it is for selecting all the elements 
+
+element - normally selectinf the element and adding the properties in { }.
+
+element, element - can use two elements for setting up the same properties as h2, p { }.
+
+element element - we want only the elements that is inside the first element, i.e., h2 p { }, we want only p's that is inside h2, so only p's inside h2(not h2 itself) will be styled this way. All p's inside h2.
+->if <h2><p>This p will be styled</p></h2>. 
+->and if <h2><p><div>This p will also be styled even now if it's parent is div.</div></p></h2>. 
+
+element > element - only elements that are the children of the outer element tag, i.e., h2 > p { }, we want only p's whose parent is h2 not anything else. 
+->if <h2><p>This p will be styled</p></h2>. 
+->but if <h2><p><div>This p will not be styled as it's parent is div now.</div></p></h2>. 
+
+element + element - style is applied to only the element which is after the first element, i.e., h2 + p{ }, any p element that is after the h2 element will be styled.
+
+:hover - initially some else style but when i hover over to the element the style changes to the hovered style mentioned. 
+
+:last-child - used with a class, puts the style only on the last element or child under that class.
+
+:first-child - used with a class, puts the style only on the first element or child under that class.
+
+!important (not recommended) - if you mark any element as important it overrides all of the css rules and retains the properties of the important element.
+
+What seletors win out in the cascade depends on:
+-Specificity -> how specific is your selector, inline styles are the most specific.
+-Importance -> if you mark it as !important or not.
+-Source Order -> the order in which you have put your css files in the html doc, the bottom one/latest one is always implemented as the browser 
+reads the html file top to bottom.
+
+-transforms move or change the appearance of an element, 
+-transitions make the element smoothly and gradually change from one state to another.
+div {
+  transition: [property] [duration] [timing-function] [delay];
+}
+
+Bootstrap and foundation both available predefined css + javascript, but bootstrap more famous.
+CDN->CONTENT DELLIVERY NETWORK.
+WE DON'T NEED TO INCLUDE OUR FILES INTO OUR PROJECT, WE JUST LINK TO SOME PLACE ELSE THAT IS ACTUALLY HOSTING THIS FILE.
+
+
+
+
+
+
+

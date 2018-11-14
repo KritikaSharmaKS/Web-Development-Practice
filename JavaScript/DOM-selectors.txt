@@ -1,0 +1,31 @@
+DOM Selectors
+--------------
+getElementsByTagName
+getElementsByClassName
+getElementById
+
+querySelector -> select first instance of the element specified.
+querySelectorAll -> selects all the instances for that element. 
+
+getAttribute -> document.querySelector("li").getAttribute("random"); = 23
+setAttribute -> document.querySelector("li").getAttribute("random, "1000");
+
+##Changing Styles
+style.{property} //ok //document.querySelector("h1").style.background="yellow";
+//but not support seperation of concerns that is why use clasName. 
+
+className //best //var h1 = document.querySelector("h1"); h1.className = "coolTitle";
+classList //best // document.querySelector("h1").classList.add("coolTitle")// or .remove() or .toggle();
+
+classList.add
+classList.remove
+classList.toggle
+
+##Bonus
+innerHTML //DANGEROUS  -> document.querySelector("h1").innerHTML()="<strong>!!!</strong>";
+
+parentElement -> document.querySelectorAll("li")[1].parentElement(); //ul
+children -> document.querySelectorAll("li")[1].parentElement().parentElement();//body
+//document.querySelectorAll("li")[1].parentElement().parentElement().children;//all children of body
+
+##It is important to CACHE selectors in variables

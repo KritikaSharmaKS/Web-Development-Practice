@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+	<!-- It is the semantics tools added in HTML 5  <header>
+		<h1>Register</h1>
+	</header>
+	<nav>
+		<a href="https://www.google.ca/">Google</a>
+	</nav>
+	<footer>
+		<p>The End.</p>
+	</footer>-->
+	<!--use GET here not POST-->
+	<!--<div>It is for diving the pages into different section</div>-->
+	<!--<span>It is more like a inline thing used for only one element.</span>-->
+	<div>
+	<form method="GET">
+		<span> First Name: </span><input type="text" name="firstname"><br><br>
+		Last Name: <input type="text" name="lastname"><br><br>
+		Email: <input type="email" name="email" required><br><br>
+		Password: <input type="password" name="password" min="5" required><br><br>
+		Birthday: <input type="date" name="birthday"><br><br>
+		Gender: <br>
+		<input type="radio" name="gender" value="Female">Female
+		<input type="radio" name="gender" value="Male">Male
+		<input type="radio" name="gender" value="Others">Others<br><br>
+		Pets: <br>
+		<input type="checkbox" name="pets" value="Cat">Cat
+		<input type="checkbox" name="pets" value="Dog">Dog<br><br>
+		Cars: <br>
+		<select name="cars">
+			<option>Volvo</option>
+			<option>Audi</option>
+			<option>Mercedes</option>
+		</select><br><br>
+		<input type="submit" value="Register">
+		<input type="reset">
+	</form>
+	</div>
+</body>
+</html>

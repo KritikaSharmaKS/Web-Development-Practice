@@ -1,0 +1,26 @@
+// Create an object and an array which we will use in our facebook exercise. 
+
+// 1. Create an object that has properties "username" and "password". Fill those values in with strings.
+-> user = {
+	username: "kangel",
+	password: "ks"
+};
+
+// 2. Create an array which contains the object you have made above and name the array "database".
+-> database = [user];
+
+// 3. Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".
+-> newsfeed = [
+    {
+		username:"ks",
+		timeline:"I am so happy with JavaScript!"
+	},
+    {
+		username:"rs",
+		timeline:"I love my daughter!"
+	},
+    {
+		username:"us",
+		timeline:"I am so proud of my daughter!" 
+	}
+];

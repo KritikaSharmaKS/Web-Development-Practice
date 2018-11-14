@@ -1,0 +1,22 @@
+h1{
+	color: blue;
+}
+
+p{
+	font-size: 20px;
+}
+
+span{
+	/*font-size: 2em;/*it is equivalent to twice the size of the container tag, i.e. 2*font-size in p tag;*/
+	font-size: 2rem;/*it is quivalent to twice the size of the root tag i.e. the html tag*/
+}
+
+/*.boxmodel{
+	border: 5px solid red;
+	display: inline-block;
+	padding: 5px 20px 5px 20px;/*it is equivalent to padding: 5px 20px; 
+	margin: 0px 20px 0px 20px;/*it is equivalent to margin: 0px 20px;
+	width: 33px;
+	height: 55px;
+}*/
+
