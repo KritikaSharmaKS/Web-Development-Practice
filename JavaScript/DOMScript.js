@@ -13,9 +13,11 @@ function createElement(){
 	var buttonEle = document.createElement("button");
 	buttonEle.appendChild(document.createTextNode("Delete"));
 	buttonEle.classList.add("delete");
+	buttonEle.onclick = deleteElement;
 	li.appendChild(document.createTextNode(input.value));
 	li.appendChild(buttonEle);
 	ul.appendChild(li);
+	li.onclick = addToggle;
 	input.value="";
 }
 
@@ -35,16 +37,21 @@ button.addEventListener("click", addElementAfterButtonClick);
 
 input.addEventListener("keypress", addElementAfterKeyPressed);
 
-for(var i=0; i<li.length; i++){
-	li[i].onclick = function() {
+
+function addToggle() {
   		this.classList.toggle("done");
-	}.bind(li[i], i);
+}
+
+function deleteElement(){
+		var parent = this.parentElement;
+		ul.removeChild(parent);
+}
+
+for(var i=0; i<li.length; i++){
+	li[i].onclick = addToggle.bind(li[i], i);
 }
 
 for (var i = 0; i <deleteButton.length; i++) {
-	deleteButton[i].onclick = function(){
-		var parent = this.parentElement;
-		ul.removeChild(parent);
-	}.bind(deleteButton[i],i);
+	deleteButton[i].onclick = deleteElement.bind(deleteButton[i],i);
 }
 
