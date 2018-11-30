@@ -1,3 +1,18 @@
+//DOM -> DOCUMENT OBJECT MODEL----------------------------------
+IT IS SOMETHING THAT THE BROWSER CREATES WHICH HELPS US IN CHANGING THE HTML AND CSS OF A WEBPAGE.
+ 
+Each web browser has it's own java script engine -> chrome has v8 engine, explorer/edge has chakra core, safari has 
+nitros, firefox has spider monkey, they are the ones that look at the java script file and read it line by line and 
+execute the javascript file. 
+Document is an object(but web browsers hide the fact that it is an object and gives us a nice html code view so we can 
+play around with it easily), which we see on the browser(the webpage), it has a parent object called WINDOW -> it 
+describes the browser, it is the parent of everyhting in a browser. 
+
+A Web browser has a Window Object, that has a property document, which specifies what should get displayed. 
+Now, to decide what to get displayed the document object, the DOM reads the html and css and then the javascript that 
+is read line by line by a java script engine reads through it and then if it ever needs to change anything, the 
+java script can speak with the document object and modify html and css.
+
 DOM Selectors
 --------------
 getElementsByTagName

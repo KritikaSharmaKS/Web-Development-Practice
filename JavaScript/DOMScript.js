@@ -1,7 +1,8 @@
 var button=document.getElementById("enter");
 var input=document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var delete = document.getElementByClass("delete"); 
+var li = document.querySelectorAll("li");
+var deleteButton = document.getElementsByClassName("delete");
 
 function checkInputLength(){
 	return input.value.length;
@@ -9,7 +10,11 @@ function checkInputLength(){
 
 function createElement(){
 	var li = document.createElement("li");
+	var buttonEle = document.createElement("button");
+	buttonEle.appendChild(document.createTextNode("Delete"));
+	buttonEle.classList.add("delete");
 	li.appendChild(document.createTextNode(input.value));
+	li.appendChild(buttonEle);
 	ul.appendChild(li);
 	input.value="";
 }
@@ -26,20 +31,20 @@ function addElementAfterKeyPressed(e){
 	}
 }
 
-function togglefun(){
-	event.target.classList.toggle("done");
-}
-
-function deleteElement(){
-	ul.getElementsByTagName('')
-}
-
-ul.addEventListener("click",togglefun);
-
 button.addEventListener("click", addElementAfterButtonClick);
 
 input.addEventListener("keypress", addElementAfterKeyPressed);
 
-delete.addEventListener("click", );
+for(var i=0; i<li.length; i++){
+	li[i].onclick = function() {
+  		this.classList.toggle("done");
+	}.bind(li[i], i);
+}
 
+for (var i = 0; i <deleteButton.length; i++) {
+	deleteButton[i].onclick = function(){
+		var parent = this.parentElement;
+		ul.removeChild(parent);
+	}.bind(deleteButton[i],i);
+}
 
