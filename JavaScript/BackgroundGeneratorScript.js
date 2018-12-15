@@ -23,5 +23,9 @@ button.addEventListener("click", function(){
 	body.style.background = "linear-gradient(to right, " + colour1 + "," + colour2 + ")";
 
 	css.textContent = body.style.background + ";";
+
+	color1.value = colour1;
+	color2.value = colour2;
+
 });
 
