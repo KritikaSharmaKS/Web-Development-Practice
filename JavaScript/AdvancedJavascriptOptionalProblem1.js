@@ -28,6 +28,7 @@ function orderFun(array){
 		}
 	}
 	return returnArray;
-}
+}	
+
 
 	
