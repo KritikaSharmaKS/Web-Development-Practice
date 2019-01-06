@@ -1,4 +1,10 @@
 /*NAV*/
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .main-navs{
     display: flex;
     list-style: none;
@@ -32,6 +38,10 @@ a{
     align-items: center;
     justify-content: center;
     height: 50vh;
+}
+
+.cover{
+    width: 20rem;
 }
 
 /*PROJECT GRID*/
