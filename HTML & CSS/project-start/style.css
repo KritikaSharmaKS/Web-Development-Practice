@@ -27,6 +27,16 @@ a{
     }
 }
 
+/*COVER*/
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+
+
 body{
     margin: auto 0;
 }
