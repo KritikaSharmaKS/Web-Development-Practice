@@ -1,4 +1,6 @@
-const a = 6;
+import largeNumber from 'script2.js';
+
+const a = largeNumber;
 const b = 9;
 
 console.log(a + b);
