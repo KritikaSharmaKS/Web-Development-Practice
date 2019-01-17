@@ -1,3 +1,5 @@
 const largeNumber = 10000;
 
-export default largeNumber;
+module.exports = {
+    largeNumber: largeNumber
+};
