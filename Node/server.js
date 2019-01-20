@@ -11,11 +11,14 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false})); //if building a server for submiting a form 
 app.use(bodyParser.json()); //to parse json objects
 
-app.get('/', (req, res) => {
+app.get('/:id', (req, res) => {
     //console.log(req.query);
     //console.log(req.body);
-    console.log(req.headers);
-    res.send("Getting Root");
+    //console.log(req.headers);
+    console.log(req.params);
+    res.status(404).send("not found");
+    
+    //res.send("Getting Root");
 });
 
 app.listen(3000);
