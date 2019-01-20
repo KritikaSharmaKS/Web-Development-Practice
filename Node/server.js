@@ -12,16 +12,10 @@ app.use(bodyParser.urlencoded({extended: false})); //if building a server for su
 app.use(bodyParser.json()); //to parse json objects
 
 app.get('/', (req, res) => {
+    //console.log(req.query);
+    //console.log(req.body);
+    console.log(req.headers);
     res.send("Getting Root");
-});
-
-app.get('/profile', (req, res) => {
-    res.send("Getting Profile");
-});
-
-app.post('/', (req, res) => {
-    console.log(req.body);
-    res.send("Success");
 });
 
 app.listen(3000);
