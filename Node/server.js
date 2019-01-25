@@ -8,17 +8,9 @@ const app = express();
 //     console.log("<h1>This will Hold the request</h1>");
 //     next();
 // });
-app.use(bodyParser.urlencoded({extended: false})); //if building a server for submiting a form 
-app.use(bodyParser.json()); //to parse json objects
+// app.use(bodyParser.urlencoded({extended: false})); //if building a server for submiting a form 
+// app.use(bodyParser.json()); //to parse json objects
 
-app.get('/:id', (req, res) => {
-    //console.log(req.query);
-    //console.log(req.body);
-    //console.log(req.headers);
-    console.log(req.params);
-    res.status(404).send("not found");
-    
-    //res.send("Getting Root");
-});
+app.use(express.static(__dirname + '/public'));
 
 app.listen(3000);
